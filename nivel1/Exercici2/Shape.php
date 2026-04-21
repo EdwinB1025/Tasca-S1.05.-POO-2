@@ -1,8 +1,17 @@
 <?php
-class Shape
+spl_autoload_register(function ($class_name) {
+    include $class_name . '.php';
+});
+abstract class Shape
 {
-    private float $ancho;
-    private float $alto;
+    abstract protected float $ancho {
+        get;
+        set;
+    }
+    abstract protected float $alto {
+        get;
+        set;
+    }
 
     protected function __construct(float $ancho, float $alto)
     {
@@ -10,8 +19,5 @@ class Shape
         $this->alto = $alto;
     }
 
-    protected function calcularArea(): float
-    {
-        return $this->ancho * $this->alto;
-    }
+    abstract protected function calcularArea(): float;
 }
