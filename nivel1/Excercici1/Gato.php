@@ -1,11 +1,11 @@
 <?php
-spl_autoload_unregister(function ($clase) {
-    include $clase . 'php';
+spl_autoload_register(function ($clase) {
+    include $clase . '.php';
 });
 
 class Gato extends Animal
 {
-    protected string $nom {
+    public string $nom {
         get => $this->nom;
         set(string $string) {
             $this->nom = strtolower($string);
