@@ -4,16 +4,11 @@ spl_autoload_register(function ($class_name) {
 });
 abstract class Shape
 {
-    abstract protected float $ancho {
-        get;
-        set;
-    }
-    abstract protected float $alto {
-        get;
-        set;
-    }
+    protected ?float $ancho;
 
-    protected function __construct(float $ancho, float $alto)
+    protected ?float $alto;
+
+    protected function __construct(?float $ancho, ?float $alto)
     {
         $this->ancho = $ancho;
         $this->alto = $alto;

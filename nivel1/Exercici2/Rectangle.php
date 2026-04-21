@@ -5,8 +5,8 @@ spl_autoload_register(function ($class_name) {
 
 class Rectangle extends Shape
 {
-    protected float $ancho;
-    protected float $alto;
+    protected ?float $ancho;
+    protected ?float $alto;
     public function __construct(float $ancho, float $alto)
     {
         parent::__construct($ancho, $alto);
@@ -30,7 +30,6 @@ class Rectangle extends Shape
     {
         $this->alto = $alto;
     }
-
 
     public function calcularArea(): float
     {
