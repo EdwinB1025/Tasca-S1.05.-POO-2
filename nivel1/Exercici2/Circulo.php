@@ -1,11 +1,9 @@
 <?php
-spl_autoload_register(function ($class_name) {
-    include $class_name . '.php';
-});
 
+require 'Shape.php';
 class Circulo extends Shape
 {
-    protected float $diametro;
+    private float $diametro;
     public function __construct(float $diametro)
     {
         parent::__construct(null, null);
@@ -20,7 +18,6 @@ class Circulo extends Shape
     {
         $this->diametro = $diametro;
     }
-
 
     public function calcularArea(): float
     {

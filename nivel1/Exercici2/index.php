@@ -1,7 +1,9 @@
 <?php
-spl_autoload_register(function ($class_name) {
-    include $class_name . '.php';
-});
+
+require 'Shape.php';
+require 'Triangle.php';
+require 'Rectangle.php';
+require 'Circulo.php';
 
 $triangulo = new Triangle(13, 6);
 $rectangulo = new Rectangle(5, 6.5);

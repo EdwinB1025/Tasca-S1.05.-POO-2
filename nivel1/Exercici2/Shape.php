@@ -4,13 +4,32 @@ spl_autoload_register(function ($class_name) {
 });
 abstract class Shape
 {
-    protected ?float $ancho;
+    private ?float $ancho;
 
-    protected ?float $alto;
+    private ?float $alto;
 
-    protected function __construct(?float $ancho, ?float $alto)
+    public function __construct(?float $ancho, ?float $alto)
     {
         $this->ancho = $ancho;
+        $this->alto = $alto;
+    }
+
+    public function getAncho(): float
+    {
+        return $this->ancho;
+    }
+    public function getAlto(): float
+    {
+        return $this->alto;
+    }
+
+    public function setAncho(float $ancho): void
+    {
+        $this->ancho = $ancho;
+    }
+
+    public function setAlto(float $alto): void
+    {
         $this->alto = $alto;
     }
 

@@ -1,11 +1,14 @@
 <?php
+
 abstract class Animal
 {
-    abstract protected string $nom {
-        get;
-        set;
+    public string $nom {
+        get => $this->nom;
+        set(string $string) {
+            $this->nom = strtolower($string);
+        }
     }
-    protected function __construct(string $nom)
+    public function __construct(string $nom)
     {
         $this->nom = $nom;
     }
