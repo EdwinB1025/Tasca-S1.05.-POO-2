@@ -1,11 +1,11 @@
 <?php
 
-require 'Shape.php';
+require_once 'Shape.php';
 
-class Rectangle extends Shape
+class Triangle extends Shape
 {
     public function calcularArea(): float
     {
-        return parent::getAlto() * parent::getAncho() / 2;
+        return $this->alto * $this->alto / 2;
     }
 }

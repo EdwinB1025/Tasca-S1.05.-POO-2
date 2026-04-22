@@ -1,12 +1,10 @@
 <?php
-spl_autoload_register(function ($class_name) {
-    include $class_name . '.php';
-});
+
 abstract class Shape
 {
-    private ?float $ancho;
+    protected ?float $ancho;
 
-    private ?float $alto;
+    protected ?float $alto;
 
     public function __construct(?float $ancho, ?float $alto)
     {

@@ -1,6 +1,6 @@
 <?php
 
-require 'Shape.php';
+require_once 'Shape.php';
 class Circulo extends Shape
 {
     private float $diametro;
